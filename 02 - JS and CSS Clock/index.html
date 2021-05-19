@@ -11,7 +11,7 @@
       <div class="clock-face">
         <div class="hand hour-hand"></div>
         <div class="hand min-hand"></div>
-        <div class="hand second-hand"></div>
+        <div id='second-hand' class="hand second-hand"></div>
       </div>
     </div>
 
@@ -78,9 +78,17 @@
       console.log('seconds', seconds)
       console.log('minutes', minutes)
       console.log('hours', hours)
+
+      const secondHand = document.querySelector('second-hand')
+      const secondRotate = parseInt((seconds / 60) * 360)
+      console.log(secondRotate)
+      document.getElementById('second-hand').style.transform = `'rotate(${secondRotate}deg);'`
+
     }
   
     setInterval(getTime, 1000)
+
+    
 
   </script>
 </body>

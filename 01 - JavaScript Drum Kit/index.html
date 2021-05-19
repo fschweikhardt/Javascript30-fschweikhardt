@@ -55,7 +55,20 @@
   <audio data-key="75" src="sounds/tom.wav"></audio>
   <audio data-key="76" src="sounds/tink.wav"></audio>
 
-<script src='drum-kit.js'></script>
+<script>
+  //onKeyPress
+  window.addEventListener('keydown', e => {
+    const audio = document.querySelector(`audio[data-key='${e.keyCode}']`)
+    console.log(audio)
+  })
+
+  //of the data-key #
+  //append the class 'playing'
+
+  //after press
+  //remove class 'playing'
+
+</script>
 
 </body>
 </html>

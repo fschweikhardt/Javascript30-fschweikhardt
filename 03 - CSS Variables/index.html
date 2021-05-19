@@ -22,10 +22,6 @@
 
   <style>
 
-    /*
-      misc styles, nothing to do with CSS variables
-    */
-
     body {
       text-align: center;
       background: #193549;
@@ -45,6 +41,10 @@
   </style>
 
   <script>
+    const spacingAdj = document.getElementById('spacing')
+    spacingAdj.addEventListener('change', e => {
+      console.log(e.target.value)
+    })
   </script>
 
 </body>

@@ -38,13 +38,32 @@
     input {
       width: 100px;
     }
+
+    img {
+      /* transform-origin: 100px 100px; */
+      /* margin: 300px; */
+      filter: blur(0px);
+
+    }
+
   </style>
 
   <script>
+
     const spacingAdj = document.getElementById('spacing')
     spacingAdj.addEventListener('change', e => {
       console.log(e.target.value)
     })
+
+    // let blurAmount;
+    const blurAdj = document.getElementById('blur')
+    const getImg = document.querySelector('img')
+    blurAdj.addEventListener('change', e => {
+      let blurAmount = `blur(${e.target.value}px);`
+      getImg.style.filter = `${blurAmount}`
+      console.log(blurAmount)
+    })
+    
   </script>
 
 </body>

@@ -46,9 +46,15 @@
     }
 
   </style>
-
+    
   <script>
-
+    const getImg = document.querySelector('img')
+    const blurAdj = document.querySelector('#blur')
+    blurAdj.addEventListener('change', e => {
+      console.log(e.target.value)
+      console.log(getImg)
+      getImg.style.filter = `blur(${e.target.value}px);`
+    } )
     
   </script>
 

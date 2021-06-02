@@ -86,10 +86,11 @@
     // Sort the people alphabetically by last name
 
     const sorted = people.sort( (a,b) => {
-      let personA = a.split(', ')
-      console.log('personA', personA)
-      let personB = b.split(', ')
-      console.log('personB', personB)
+      let [xLast, xFirst] = a.split(', ')
+      // console.log('personA', personA)
+      let [yLast, yFirst] = b.split(', ')
+      // console.log('personB', personB)
+      return xLast > yLast ? 1 : -1
     })
 
     console.log(sorted)

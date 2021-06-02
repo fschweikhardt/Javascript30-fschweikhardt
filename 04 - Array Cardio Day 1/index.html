@@ -62,8 +62,8 @@
 
     // Array.prototype.reduce()
     // 4. How many years did all the inventors live all together?
-    let answer4 = inventors.reduce( (total, number) => {
-      return total + (number.passed - number.year)
+    let answer4 = inventors.reduce( (total, inventor) => {
+      return total + (inventor.passed - inventor.year)
     }, 0)
 
     console.log(answer4)

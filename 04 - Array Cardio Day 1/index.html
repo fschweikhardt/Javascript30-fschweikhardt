@@ -91,8 +91,10 @@
 
     console.log(sorted)
 
-    const arrayTest = ['cat', 'apple', 'bananna']
-    const sortTest = arrayTest.sort()
+    const arrayTest = [100, 1, 2]
+    const sortTest = arrayTest.sort( (a,b) => {
+      return b - a
+    })
     console.log(sortTest)
 
     // 8. Reduce Exercise

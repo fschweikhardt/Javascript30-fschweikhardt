@@ -96,15 +96,23 @@
 
     console.log(sorted)
 
-    const arrayTest = ['cat', 'apple', 'bananna']
-    const sortTest = arrayTest.sort( (a,b) => {
-      return b - a
-    })
-    console.log(sortTest)
-
     // 8. Reduce Exercise
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
+    
+    const dataSet = [...new Set(data)]
+    console.log(dataSet)
+    
+    const dataFilter = data.filter( (item , index) => {
+      return data.indexOf(item) === index
+    })
+    console.log(dataFilter)
+
+    const dataReduce = data.reduce( (total, current) => {
+      return total.includes(current) ? total : [...total, current]
+    }, [])
+    console.log(dataReduce)
+
 
   </script>
 </body>

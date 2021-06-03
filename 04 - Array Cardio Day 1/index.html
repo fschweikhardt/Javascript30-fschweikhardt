@@ -86,12 +86,17 @@
     // Sort the people alphabetically by last name
 
     const sorted = people.sort( (a,b) => {
-      
+      // console.log(a.split(', ')[0])
+      const peopleSortA = a.split(', ')[0]
+      // console.log('A', peopleSortA)
+      const peopleSortB = b.split(', ')[0]
+      // console.log('B', peopleSortB)
+      return peopleSortA > peopleSortB ? 1 : -1
     })
 
     console.log(sorted)
 
-    const arrayTest = [100, 1, 2]
+    const arrayTest = ['cat', 'apple', 'bananna']
     const sortTest = arrayTest.sort( (a,b) => {
       return b - a
     })

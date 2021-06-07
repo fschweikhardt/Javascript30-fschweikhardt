@@ -19,9 +19,10 @@
   let lastX = 0;
   let lastY = 0;
 
-  canvas.addEventListener('onmousemove', e => {
+  function draw(e) {
     console.log(e)
-  })
+  }
+  canvas.addEventListener('mousemove', draw)
 
 </script>
 

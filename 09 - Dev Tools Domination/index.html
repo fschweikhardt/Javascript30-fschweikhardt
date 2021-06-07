@@ -10,7 +10,7 @@
 
   <script>
     const dogs = [{ name: 'Snickers', age: 2 }, { name: 'hugo', age: 8 }];
-
+    const name = 'Frank'
     function makeGreen() {
       const p = document.querySelector('p');
       p.style.color = '#BADA55';
@@ -18,29 +18,51 @@
     }
 
     // Regular
-    
+    console.log('hello')
 
     // Interpolated
+    console.log(`hello ${name}`)
 
     // Styled
+    console.log('%c Hello again!', 'background-color: blue')
 
     // warning!
+    console.warn('warning')
 
     // Error :|
+    console.error('error')
 
     // Info
+    console.info('information you might need to know')
 
     // Testing
+    console.assert((1 === 23), "it is wrong")
 
     // clearing
+    console.clear()
 
     // Viewing DOM Elements
+    dogs.forEach(dog => {
+      console.groupCollapsed(`${dog.name}`)
+      console.log(`This is ${dog.name}`)
+      console.log(`It is ${dog.age} years old`)
+      console.groupEnd(`${dog}`)
+
+    })
 
     // Grouping together
+    console.table(dogs)
 
     // counting
+    console.count('Franks')
+    console.count('Franks')
+    console.count('Franks')
+    console.count('Franks')
 
     // timing
+    console.timeEnd()
+    console.timeLog()
+    console.timeStamp()
 
   </script>
 </body>

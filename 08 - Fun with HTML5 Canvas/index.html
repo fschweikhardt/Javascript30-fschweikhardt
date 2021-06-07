@@ -19,10 +19,17 @@
   let lastX = 0;
   let lastY = 0;
 
-  function draw(e) {
+  canvas.addEventListener('mousedown', e => {
     console.log(e)
-  }
-  canvas.addEventListener('mousemove', draw)
+    // [lastX, lastY] = [e.offsetX, e.offsetY]
+    lastX = e.offsetX
+    lastY = e.offsetY
+    isDrawing = true
+    // console.log([lastX, lastY])
+  })
+
+
+
 
 </script>
 

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Key Detection</title>
+  <script type="text/javascript" src="https://www.cornify.com/js/cornify.js"></script>
+</head>
+<body>
+  <h1>This is the secret code:</h1>
+  <h2 id="konami"></h2>
+<script>
+
+  let konami = document.querySelector('#konami')
+  let code = []
+  let secretCode = "a"
+
+  const updateText = e => {
+      console.log(e)
+      code.push(e.key)
+      const discovered = konami.innerHTML = 'You did it!'
+      const hidden = konami.innerHTML = 'Try to unlock the secret'
+      console.log(code.join(''))
+      code.join('').includes(secretCode) ? discovered : discovered
+    }
+
+  document.addEventListener('keyup', updateText)
+
+</script>
+</body>
+</html>

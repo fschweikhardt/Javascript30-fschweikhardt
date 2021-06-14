@@ -10,20 +10,29 @@
   <h2 id="konami"></h2>
 <script>
 
-  let konami = document.querySelector('#konami')
-  let code = []
-  let secretCode = "a"
+  // let konami = document.querySelector('#konami')
+  // let code = []
+  // let secretCode = "abc"      
+  // let discovered = console.log('You did it!')
+  // let hidden = console.log('Try to unlock the secret')
 
-  const updateText = e => {
-      console.log(e)
-      code.push(e.key)
-      const discovered = konami.innerHTML = 'You did it!'
-      const hidden = konami.innerHTML = 'Try to unlock the secret'
-      console.log(code.join(''))
-      code.join('').includes(secretCode) ? discovered : discovered
-    }
+  // const updateText = e => {
+  //     code.push(e.key)
+  //     console.log(code.join(''))
+  //     code.join('').includes(secretCode) ? discovered : hidden
+  //   }
 
-  document.addEventListener('keyup', updateText)
+  // window.addEventListener('keyup', updateText)
+  
+  const pressed = [];
+const secretCode = 'helloo';
+
+window.addEventListener('keyup', (e) => {
+  console.log(e.key);
+  pressed.push(e.key);
+  pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length);
+  pressed.join('').includes(secretCode) ? (console.log('DING DING!'), cornify_add() ): console.log(pressed);
+})
 
 </script>
 </body>

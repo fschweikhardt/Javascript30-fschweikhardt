@@ -182,6 +182,37 @@
     </li>
   </ul>
 <script>
+
+  const dataTime = Array.from(document.querySelectorAll('[data-time]'))
+
+  console.log(dataTime)
+
+  let seconds = 0
+  let minutes = 0
+  let hours = 0
+
+  dataTime.map( x => {
+    let time = x.dataset.time.split(':')
+    minutes += Number(time[0])
+    seconds += Number(time[1])
+  })
+
+  // console.log(seconds)
+  // console.log(minutes)
+
+  seconds = minutes * 60
+  minutes = 0
+
+  hours = Math.floor(seconds / 3600)
+  let extraSeconds = seconds % 3600
+  minutes = Math.floor(extraSeconds / 60)
+  seconds = extraSeconds % 60
+  
+  console.log(seconds)
+  console.log(minutes)
+  // console.log(extraSeconds)
+  console.log(hours)
+
 </script>
 </body>
 </html>

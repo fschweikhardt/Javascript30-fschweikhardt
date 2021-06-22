@@ -197,21 +197,15 @@
     seconds += Number(time[1])
   })
 
-  // console.log(seconds)
-  // console.log(minutes)
-
-  seconds = minutes * 60
+  seconds = seconds + minutes * 60
   minutes = 0
 
   hours = Math.floor(seconds / 3600)
-  let extraSeconds = seconds % 3600
-  minutes = Math.floor(extraSeconds / 60)
-  seconds = extraSeconds % 60
+  let secondsLeft = seconds % 3600
+  minutes = Math.floor(secondsLeft / 60)
+  seconds = secondsLeft % 60
   
-  console.log(seconds)
-  console.log(minutes)
-  // console.log(extraSeconds)
-  console.log(hours)
+  console.log(hours, minutes, seconds)
 
 </script>
 </body>

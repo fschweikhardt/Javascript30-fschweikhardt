@@ -52,17 +52,26 @@ const bandList = document.querySelector('#bands')
 
 function display() {
   const filteredBands = bands.map( item => {
-    console.log(item[0], item[1])
-    return (item[0] === 'A' && item[1] === '') ? item = 'removed band' : item
+    if (item[0] === 'A' && item[1] === ' ') {
+      item = item.slice(2)
+    } 
+    else if (item[0] === 'A' && item[1] === 'n' && item[2] === ' ') {
+      item = item.slice(3)
+    }
+    else if (item[0] === 'T' && item[1] === 'h' && item[2] === 'e' && item[3] === ' ') {
+      item = item.slice(4)
+    }
+    return item
   })
+
+  console.log(bands)
   console.log(filteredBands)
 
   //if the item starts with 'a, the, an'
   //remove the article 
   
-  
   //display the list
-  bandList.innerHTML = filteredBands.map(band => `<li>${band}</li>`)
+  bandList.innerHTML = filteredBands.sort().map(band => `<li>${band}</li>`)
 }
 
 display()
